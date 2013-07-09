@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Chameleon UI – Modal</title>
+    <style>
+        .modal {
+            border: 1px solid red;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chameleon UI – Modal</h1>
+    <p id="hook">Build a Modal object for you and help you place it as Element in DOM.</p>
+    <button class="modal-show">Show modal</button>
+    <button class="modal-hide">Hide modal</button>
+    <button class="modal-toggle">Toggle modal</button>
+
+    <script src="build/build.js"></script>
+    <script>
+        var $ = require('jquery');
+        var Modal = require('modal');
+
+        var m = new Modal('#hook', { method: 'after' });
+        ['show','hide', 'toggle'].map(function(x){
+            $('body').on('click.modal-'+x, '.modal-'+x, function(e) { 
+                m[x](); 
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "modal",
+  "repo": "chameleonui/modal",
+  "description": "Universal in page modal object/element",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "1.9.1",
+    "component/emitter": "*",
+    "component/inherit": "*",
+    "cayasso/doT": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
