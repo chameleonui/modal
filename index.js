@@ -60,9 +60,13 @@ Modal.prototype.hide = function() {
 Modal.prototype.toggle = function(el, method, data) {
     if (this._jqEl) {
         this.hide();
+        if (el && el != this._bindTo) {
+            this.show(el, method, data);
+        }
     } else {
         this.show(el, method, data);
     }
+
     this.emit('toggle');
     return this;
 }

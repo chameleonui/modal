@@ -16,6 +16,11 @@
     <button class="modal-show">Show modal</button>
     <button class="modal-hide">Hide modal</button>
     <button class="modal-toggle">Toggle modal</button>
+    <h2>Toggling between elements</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, architecto, dignissimos, dolor, nobis odit consequatur ex voluptas quas inventore eos voluptates quod iusto delectus explicabo.</p>
+    <button class="modal-toggle-between">Toggle modal</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, architecto, dignissimos, dolor, nobis odit consequatur ex voluptas quas inventore eos voluptates quod iusto delectus explicabo.</p>
+    <button class="modal-toggle-between">Toggle modal</button>
 
     <script src="build/build.js"></script>
     <script>
@@ -27,6 +32,11 @@
             $('body').on('click.modal-'+x, '.modal-'+x, function(e) { 
                 m[x](); 
             });
+        });
+
+        var m1 = new Modal(null,{ method: 'before' });
+        $('body').on('click.modal-toggle-between', '.modal-toggle-between', function(e) { 
+            m1.toggle(this); 
         });
     </script>
 </body>
