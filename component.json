@@ -8,7 +8,7 @@
     "component/jquery": "1.9.1",
     "component/emitter": "1.0.0",
     "component/inherit": "0.0.2",
-    "cayasso/doT": "1.0.0"
+    "cayasso/doT": "*"
   },
   "license": "MIT",
   "main": "index.js",
