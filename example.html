@@ -8,19 +8,38 @@
             border: 1px solid red;
             padding: 1em;
         }
+        .is-hidden {
+            display: none;
+        }
+        #content {
+            border: 1px solid #999;
+            margin: 1em 0;
+            padding: 1em;
+        }
     </style>
 </head>
 <body>
     <h1>Chameleon UI – Modal</h1>
-    <p id="hook">Build a Modal object for you and help you place it as Element in DOM.</p>
+    <p id="hook">Build a Modal object, place it as in DOM, show it and set content.</p>
+    <button class="modal-place">Place modal</button>
     <button class="modal-show">Show modal</button>
-    <button class="modal-hide">Hide modal</button>
+    <br />
+    <button class="modal-content-set">Set "In-page" content</button>
+    <button class="modal-content-null">Set "null" content</button>
+    <button class="modal-content-ajax">Set AJAX content</button>
+    <button class="modal-content-ajax-error5">Set AJAX Error 500</button>
+    <button class="modal-content-ajax-error4">Set AJAX Error 403</button>
+    <br />
     <button class="modal-toggle">Toggle modal</button>
-    <h2>Toggling between elements</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, architecto, dignissimos, dolor, nobis odit consequatur ex voluptas quas inventore eos voluptates quod iusto delectus explicabo.</p>
-    <button class="modal-toggle-between">Toggle modal</button>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, architecto, dignissimos, dolor, nobis odit consequatur ex voluptas quas inventore eos voluptates quod iusto delectus explicabo.</p>
-    <button class="modal-toggle-between">Toggle modal</button>
+    <button class="modal-hide">Hide modal</button>
+    <button class="modal-remove">Remove modal</button>
+    <hr />
+    <h3>In-page content:</h3>
+    <div id="content">
+        <strong>Hello</strong>, I am test in-page content.
+    </div>
+
+    <!-- ===================================== -->
 
     <script src="build/build.js"></script>
     <script>
@@ -28,16 +47,32 @@
         var Modal = require('modal');
 
         var m = new Modal('#hook', { method: 'after' });
-        ['show','hide', 'toggle'].map(function(x){
+        ['place','remove','show','hide', 'toggle'].map(function(x){
             $('body').on('click.modal-'+x, '.modal-'+x, function(e) { 
                 m[x](); 
             });
         });
 
-        var m1 = new Modal(null,{ method: 'before' });
-        $('body').on('click.modal-toggle-between', '.modal-toggle-between', function(e) { 
-            m1.toggle(this); 
+        $('body').on('click.modal-content-set', '.modal-content-set', function(e) { 
+            m.content($('#content').html()); 
         });
+
+        $('body').on('click.modal-content-null', '.modal-content-null', function(e) { 
+            m.content(null); 
+        });
+
+        $('body').on('click.modal-content-ajax', '.modal-content-ajax', function(e) { 
+            m.ajaxContent('http://chameleonui.apiary.io/modal');
+        });
+
+        $('body').on('click.modal-content-ajax-error', '.modal-content-ajax-error5', function(e) { 
+            m.ajaxContent('http://chameleonui.apiary.io/modal-error500');
+        });
+
+        $('body').on('click.modal-content-ajax-error', '.modal-content-ajax-error4', function(e) { 
+            m.ajaxContent('http://chameleonui.apiary.io/modal-error403');
+        });
+
     </script>
 </body>
 </html>
