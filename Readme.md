@@ -14,24 +14,24 @@
 Creates new Modal object attached to `el` with optional options. 
 Options has following default values:
 
-    ```js
-    var defaults = {
-        template: "<div class='modal is-hidden'></div>", 
-        method: 'after',
-        class: 'modal',
-        classHidden: 'is-hidden',
-        eventName: 'chameleonui-modal',
-        ajaxErrorMsg: 'Server communication error!'
-    };
-    ```
+```js
+var defaults = {
+    template: "<div class='modal is-hidden'></div>", 
+    method: 'after',
+    class: 'modal',
+    classHidden: 'is-hidden',
+    eventName: 'chameleonui-modal',
+    ajaxErrorMsg: 'Server communication error!'
+};
+```
 
 Public properties:
     
-    ```js
-    Modal.id;        // Unique ID used for HTML element
-    Modal.isPlaced;  // DOM placement state
-    Modal.isVisible; // visibility state
-    ```
+```js
+Modal.id;        // Unique ID used for HTML element
+Modal.isPlaced;  // DOM placement state
+Modal.isVisible; // visibility state
+```
 
 
 ### Modal.template(template:stringDoT):this
@@ -75,6 +75,10 @@ Replace content by AJAX response if Modal already placed.
  - `type` – HTTP request method GET/POST… etc. 
     - be aware XHR needs CORS and HTTP OPTIONS enabled
  - `cache` – use cache for XHR on not – default: `true`
+
+## Author(s)
+
+[Edgedesign s.r.o.](http://www.edgedesing.cz) – Tomas Kuba
 
 
 ## License
