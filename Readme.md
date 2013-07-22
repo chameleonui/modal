@@ -44,7 +44,7 @@ Sets DoT template of Modal.
 Place Modalt into DOM – hidden by default.
 
 
-### Modal.show():this
+### Modal.remove():this
 
 Remove hide and remove modal form DOM.
 
