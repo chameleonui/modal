@@ -142,17 +142,12 @@ Modal.prototype.ajaxContent = function(url, type, cache) {
         $.ajax(url, setting)
             .done(function(data, status, xhr) {
                 this.content(data);
+                this.emit('ajax-done');
             })
             .fail(function(xhr, status, error) {
-                console.log(xhr);
                 this.content(xhr.responseText || this.options.ajaxErrorMsg);
+                this.emit('ajax-fail');
             }); 
     }
     return this;
 };
-
-
-
-
-
-
