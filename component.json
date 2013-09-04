@@ -2,7 +2,7 @@
   "name": "modal",
   "repo": "chameleonui/modal",
   "description": "Universal in page modal object/element",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "keywords": ["modal", "chameleon"],
   "dependencies": {
     "component/jquery": "1.9.1",
