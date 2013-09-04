@@ -6,9 +6,9 @@ var $ = require('jquery'),
 module.exports = Modal;
 
 var defaults = {
-    template: "<div class='modal is-hidden'></div>", 
+    template: "<div class='modal is-hidden'></div>",
     method: 'after',
-    class: 'modal',
+    className: 'modal',
     classHidden: 'is-hidden',
     eventName: 'chameleonui-modal',
     ajaxErrorMsg: 'Server communication error!'
@@ -75,10 +75,10 @@ Modal.prototype.remove = function() {
 
 Modal.prototype._bindClickRemove = function() {
     var eventName = 'click.' + this.options.eventName + '-' + this.id,
-    selector = '#' + this.id + ' [data-' + this.options.class + ']';
+    selector = '#' + this.id + ' [data-' + this.options.className + ']';
     $('body').on(eventName, selector, this, function(e){
         e.preventDefault();
-        var action = $(this).data(e.data.options.class);
+        var action = $(this).data(e.data.options.className);
         if (action == 'remove' || action == 'hide') {
             e.data[action]();
         }

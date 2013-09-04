@@ -1,3 +1,7 @@
+### v1.2.0
+
+- Fixed reserved names
+
 ### v1.1.0
 
 - Redefined component API

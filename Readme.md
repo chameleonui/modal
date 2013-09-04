@@ -16,9 +16,9 @@ Options has following default values:
 
 ```js
 var defaults = {
-    template: "<div class='modal is-hidden'></div>", 
+    template: "<div class='modal is-hidden'></div>",
     method: 'after',
-    class: 'modal',
+    className: 'modal',
     classHidden: 'is-hidden',
     eventName: 'chameleonui-modal',
     ajaxErrorMsg: 'Server communication error!'
@@ -78,7 +78,7 @@ Replace content by AJAX response if Modal already placed.
 
 ## Author(s)
 
-[Edgedesign s.r.o.](http://www.edgedesing.cz) – Tomas Kuba
+[Edgedesign s.r.o.](http://www.edgedesing.cz) – [Tomas Kuba](https://github.com/tomaskuba)
 
 
 ## License
