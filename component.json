@@ -2,10 +2,10 @@
   "name": "modal",
   "repo": "chameleonui/modal",
   "description": "Universal in page modal object/element",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "keywords": ["modal", "chameleon"],
   "dependencies": {
-    "component/jquery": "1.9.1",
+    "components/jquery": "1.11",
     "component/emitter": "1.0.0",
     "component/inherit": "0.0.2",
     "cayasso/doT": "*"

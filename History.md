@@ -1,11 +1,15 @@
+### v1.2.1
+
+* Updated jquery dependency
+
 ### v1.2.0
 
-- Fixed reserved names
+* Fixed reserved names
 
 ### v1.1.0
 
-- Redefined component API
+* Redefined component API
 
 ### v1.0.0
 
-- First public relelase
+* First public relelase
